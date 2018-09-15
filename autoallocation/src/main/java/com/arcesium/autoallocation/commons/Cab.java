@@ -3,9 +3,9 @@ package com.arcesium.autoallocation.commons;
 public class Cab {
 
 	private String licenseNumber;
-
+	
 	private Integer cabId;
-
+	
 	private Integer numberOfSeats;
 
 	private String driverName;
