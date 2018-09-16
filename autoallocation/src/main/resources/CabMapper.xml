@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CabMapper">
+
+	<resultMap id="cabResult" type="com.arcesium.autoallocation.commons.Cab">
+		<id property="cabId" column="cab_id" />
+		<result property="licenseNumber" column="license_number" />
+		<result property="numberOfSeats" column="number_of_seats" />
+		<result property="driverName" column="driver_name" />
+	</resultMap>
+
+	<select id="selectCabs" resultMap="cabResult">
+		select * from cab_data
+	</select>
+
+	<insert id="insertCab" parameterType="com.arcesium.autoallocation.commons.Cab">
+		insert into cab_data(license_number,number_of_seats,driver_name)
+		VALUES
+		(#{licenseNumber}, #{numberOfSeats}, #{driverName})
+	</insert>
+
+</mapper>
