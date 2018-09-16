@@ -22,6 +22,7 @@ import com.arcesium.autoallocation.commons.Cab;
 import com.arcesium.autoallocation.commons.GPSCoordinates;
 import com.arcesium.autoallocation.commons.GeoCodeData;
 import com.arcesium.autoallocation.dao.CabServiceDAO;
+import com.arcesium.autoallocation.dao.CabServiceDAOImpl;
 import com.google.gson.Gson;
 
 public class AutoAllocationServiceImpl implements AutoAllocationService {
@@ -29,9 +30,9 @@ public class AutoAllocationServiceImpl implements AutoAllocationService {
 	public Boolean addNewCab(String licenseNumber, Integer cabId, Integer numberOfSeats, String driverName) {
 		// TODO Auto-generated method stub
 
-		CabServiceDAO cabServiceDAO = new CabServiceDAO();
+		CabServiceDAO cabServiceDAO = new CabServiceDAOImpl();
 
-		Cab cab = new Cab(licenseNumber, cabId, numberOfSeats, driverName);
+		Cab cab = new Cab(cabId, licenseNumber, numberOfSeats, driverName);
 
 		return null;
 	}

@@ -10,9 +10,15 @@ public class Cab {
 
 	private String driverName;
 
-	public Cab(String licenseNumber, Integer cabId, Integer numberOfSeats, String driverName) {
+	public Cab(Integer cabId, String licenseNumber, Integer numberOfSeats, String driverName) {
 		this.licenseNumber = licenseNumber;
 		this.cabId = cabId;
+		this.numberOfSeats = numberOfSeats;
+		this.driverName = driverName;
+	}
+
+	public Cab(String licenseNumber, Integer numberOfSeats, String driverName) {
+		this.licenseNumber = licenseNumber;
 		this.numberOfSeats = numberOfSeats;
 		this.driverName = driverName;
 	}
@@ -49,4 +55,9 @@ public class Cab {
 		this.driverName = driverName;
 	}
 
+	@Override
+	public String toString() {
+		return "Cab [licenseNumber=" + licenseNumber + ", cabId=" + cabId + ", numberOfSeats=" + numberOfSeats
+				+ ", driverName=" + driverName + "]";
+	}
 }

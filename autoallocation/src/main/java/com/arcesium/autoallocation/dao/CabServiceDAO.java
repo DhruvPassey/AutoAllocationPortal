@@ -1,5 +1,13 @@
 package com.arcesium.autoallocation.dao;
 
-public class CabServiceDAO {
+import java.util.List;
+
+import com.arcesium.autoallocation.commons.Cab;
+
+public interface CabServiceDAO {
+
+	public List<Cab> getListOfCabs();
+
+	public Integer addCab(Cab cab);
 
 }
